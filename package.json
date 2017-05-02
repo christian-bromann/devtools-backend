@@ -37,7 +37,7 @@
     "eslint": "eslint ./lib/*.js",
     "install": "cd node_modules/chrome-devtools-frontend/scripts/gulp && npm install && cd ../../../../",
     "start": "npm run start:server",
-    "start:dev": "NODE_ENV=development nodemon -e html,js,json,yaml --watch build --watch static --ignore build/webdriver/ --ignore build/debugger/",
+    "start:dev": "NODE_ENV=development nodemon -e html,js,json,yaml --watch build --ignore build/frontend/",
     "start:server": "node build/index.js",
     "start:dev:babel": "npm run compile -- --watch",
     "start:dev:webpack": "npm run webpack -- --watch",
