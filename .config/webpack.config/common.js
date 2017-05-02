@@ -16,7 +16,8 @@ export default {
         filename: '[name].js'
     },
     entry: {
-        'scripts/debugger': './frontend/debugger.bundle.js'
+        'scripts/debugger': './frontend/debugger.bundle.js',
+        'scripts/launcher': './frontend/launcher.bundle.js'
     },
     resolve: {
         extensions: ['.js', '.es6'],
