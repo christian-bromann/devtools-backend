@@ -1,0 +1,16 @@
+{
+    "presets": [
+      ["env", {
+        "targets": {
+          "node": 0.12
+        }
+      }],
+      "stage-0"
+    ],
+    "plugins": [
+        "syntax-async-functions",
+        "transform-runtime",
+        "add-module-exports",
+        "transform-class-properties"
+    ]
+}

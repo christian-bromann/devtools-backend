@@ -1,0 +1,12 @@
+{
+  "extends": "standard",
+  "parser": "babel-eslint",
+  "rules": {
+    "indent": [2, 4],
+    "generator-star-spacing": 0
+  },
+  "env": {
+    "node": true,
+    "es6": true
+  }
+}
