@@ -32,7 +32,7 @@
     "build:driver": "run-s clean compile webpack",
     "build:devtools": "cd node_modules/chrome-devtools-frontend/scripts/gulp && npm run build && cd ../../../../",
     "clean": "rm -rf ./build",
-    "compile": "babel lib/ -d build/ --ignore lib/webdriver,lib/debugger/",
+    "compile": "babel lib/ -d build/ --ignore lib/frontend/",
     "dev": "run-p start:dev:*",
     "eslint": "eslint ./lib/*.js",
     "install": "cd node_modules/chrome-devtools-frontend/scripts/gulp && npm install && cd ../../../../",
@@ -41,11 +41,8 @@
     "start:server": "node build/index.js",
     "start:dev:babel": "npm run compile -- --watch",
     "start:dev:webpack": "npm run webpack -- --watch",
-    "test": "run-s eslint test:unit test:e2e",
-    "test:unit": "mocha",
-    "test:unit:cover": "babel-node ./node_modules/.bin/isparta cover --include './lib/**/*.js' _mocha",
-    "test:e2e": "echo 'no e2e tests yet'",
-    "webpack": "webpack --progress --colors --config config/webpack.config"
+    "test": "eslint",
+    "webpack": "webpack --progress --colors --config .config/webpack.config"
   },
   "dependencies": {
     "babel-runtime": "~6.23.0",
