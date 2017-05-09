@@ -1,7 +1,8 @@
-<script src="http://<%= tvIPAddress %>:9222/socket.io/socket.io.js" data-origin="debugger"></script>
 <script type="text/javascript" data-origin="debugger">
     //<![CDATA[
-    window.socket = window.io();
+    <%- script %>
+
+    window.socket = window.io('http://localhost:9222');
     /**
      * convinience method to log data in Appium
      */
