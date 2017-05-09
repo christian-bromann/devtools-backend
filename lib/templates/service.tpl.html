@@ -1,0 +1,12 @@
+<script type="text/javascript" data-origin="debugger">
+    //<![CDATA[
+    try {
+        <%- script %>
+    } catch (e) {
+        window.socket.emit('error:injectScript', {
+            name: "<%= name %>!",
+            errorMsg: e.message
+        })
+    }
+    //]]>
+</script>

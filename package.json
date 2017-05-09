@@ -30,10 +30,11 @@
   "scripts": {
     "aws:login": "eval $(aws --profile default ecr get-login --region eu-west-1)",
     "build": "run-s build:*",
-    "build:driver": "run-s clean compile webpack",
+    "build:driver": "run-s clean compile copy webpack",
     "build:devtools": "cd node_modules/chrome-devtools-frontend/scripts/gulp && npm run build && cd ../../../../",
     "clean": "rm -rf ./build",
     "compile": "babel lib/ -d build/ --ignore lib/frontend/",
+    "copy": "cp -r ./lib/templates ./build",
     "dev": "run-p start:dev:*",
     "docker:build": "docker build -t devtools-backend .",
     "docker:tag": "docker tag devtools-backend:latest 268024020396.dkr.ecr.eu-west-1.amazonaws.com/devtools-backend:latest",

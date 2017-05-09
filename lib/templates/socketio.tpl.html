@@ -1,0 +1,24 @@
+<script src="http://<%= tvIPAddress %>:9222/socket.io/socket.io.js" data-origin="debugger"></script>
+<script type="text/javascript" data-origin="debugger">
+    //<![CDATA[
+    window.socket = window.io();
+    /**
+     * convinience method to log data in Appium
+     */
+    window.log = function () {
+        var args = Array.prototype.slice.call(arguments);
+        window.socket.emit('log', args);
+    }
+    /**
+     * register onError handler to propagate page errors back to proxy server
+     * https://developer.mozilla.org/en-US/docs/Web/API/GlobalEventHandlers/onerror
+     */
+    window.onerror = function (errorMsg, url, lineNumber) {
+        window.socket.emit('error:window', {
+           errorMsg: errorMsg,
+           url: url,
+           lineNumber: lineNumber
+        });
+    };
+    //]]>
+</script>
