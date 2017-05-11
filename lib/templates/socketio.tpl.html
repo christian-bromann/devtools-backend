@@ -1,8 +1,7 @@
+<script src="http://<%= proxyAddress %>:<%= proxyPort %>/socket.io/socket.io.js" data-origin="debugger"></script>
 <script type="text/javascript" data-origin="debugger">
     //<![CDATA[
-    <%- script %>
-
-    window.socket = window.io('http://localhost:9222');
+    window.socket = window.io('http://<%= proxyAddress %>:<%= proxyPort %>');
     /**
      * convinience method to log data in Appium
      */
