@@ -9,7 +9,7 @@
         <%- script %>
     } catch (e) {
         window.socket.emit('error:injectScript', {
-            name: "<%= name %>!",
+            name: "<%= name %>",
             errorMsg: e.message,
             stack: e.stack
         })
