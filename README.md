@@ -65,3 +65,17 @@ export LOGGING_PATH=/home/user/logs
 # or start the server with that environment variable set
 LOGGING_PATH=/home/user/logs npm run start
 ```
+
+## Development
+
+To recompile files automatically run:
+
+```sh
+$ npm run dev
+```
+
+After files are recompiled you need to restart the server. This can be triggered automatically when running it in "dev" mode:
+
+```sh
+$ npm run start:dev
+```
