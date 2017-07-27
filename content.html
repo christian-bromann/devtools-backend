@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE html PUBLIC "-//HbbTV//1.1.1//EN" "http://www.hbbtv.org/dtd/HbbTV-1.1.1.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head><script src="http://192.168.0.1:9222/socket.io/socket.io.js" data-origin="debugger"/>
+<script type="text/javascript" data-origin="debugger">
+    //<![CDATA[
+    window.socket = window.io('http://192.168.0.1:9222');
+    /**
+     * convinience method to log data in Appium
+     */
+    window.log = function () {
+        var args = Array.prototype.slice.call(arguments);
+        window.socket.emit('log', args);
+    }
+    /**
+     * register onError handler to propagate page errors back to proxy server
+     * https://developer.mozilla.org/en-US/docs/Web/API/GlobalEventHandlers/onerror
+     */
+    window.onerror = function (errorMsg, url, lineNumber) {
+        window.socket.emit('error:window', {
+           errorMsg: errorMsg,
+           url: url,
+           lineNumber: lineNumber
+        });
+    };
+
+    window._uuid = 'cebc4efd-2df2-428a-a6fa-5178ee7254c3'
+    window._proxyHost = '192.168.0.1:9222'
+    //]]>
+</script>
+<script type="text/javascript" data-origin="debugger" data-uuid="cebc4efd-2df2-428a-a6fa-5178ee7254c3" data-proxy-host="192.168.0.1:9222">
+    //<![CDATA[
+    try {
+        console.log("sooo")
+    } catch (e) {
+        window.socket.emit('error:injectScript', {
+            name: "DebuggerService",
+            errorMsg: e.message,
+            stack: e.stack
+        })
+    }
+    //]]>
+</script>
+
+    <meta http-equiv="Content-type" content="application/vnd.hbbtv.xhtml+xml; charset=UTF-8"/>
+    <script type="text/javascript" src="http://52.59.90.254:8000/launcher/js/keycodes.js"/>
+    <script type="text/javascript" src="http://52.59.90.254:8000/launcher/js/hbbtvlib.js"/>
+    <script type="text/javascript">
+        //<![CDATA[
+        window.query = (function () {
+            var query = {};
+            var search = location.search.substr(1).split("&");
+            for (var i = 0; i < search.length; i++) {
+                var b = search[i].split('=');
+                query[decodeURIComponent(b[0])] = decodeURIComponent(b[1] || '');
+            }
+            return query;
+        })();
+        function handleKeyCode(kc) {
+            switch(kc){
+                case VK_RED:
+                    goTo(location.hash.substr(1));
+                    return true;
+                case VK_BACK:
+                case 27:
+                    goBack();
+                    return true;
+                default:
+                    return false;
+            }
+        };
+        function initApp(){
+            hbbtvlib_initialize();
+            hbbtvlib_show();
+        };
+        function registerKeyEventListener(){
+            document.addEventListener("keydown", function(e){
+                if(handleKeyCode(e.keyCode)) e.preventDefault();
+            },false);
+        };
+        function goBack() {
+            window.history && window.history.back();
+        };
+        function goTo(link) {
+            window.location.href=link;
+        };
+        window.onload = function(){
+            registerKeyEventListener();
+            initApp();
+            var timeout = parseInt(query.timeout);
+            timeout && setTimeout(function () {
+                document.getElementById("red").style.display = "none";
+            },timeout);
+        };
+        //]]>
+    </script>
+</head>
+<body>
+<div id="red" style="position: absolute; right: 50px; bottom: 30px; width: 50px; height: 30px;background-color: red;"/>
+<!-- // -->
+</body>
+</html>
