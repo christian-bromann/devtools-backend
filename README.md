@@ -79,3 +79,7 @@ After files are recompiled you need to restart the server. This can be triggered
 ```sh
 $ npm run start:dev
 ```
+
+***
+
+This project was created as part of a master thesis by [Christian Bromann](https://github.com/christian-bromann) on _"Design and implementation of a Development and Test Automation Platform for HbbTV"_. The dissertation originated in cooperation with the [Fraunhofer Institute for Open Communication Systems (FOKUS)](https://www.fokus.fraunhofer.de/en) and [Louay Bassbouss](https://github.com/louaybassbouss).
