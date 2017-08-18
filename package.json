@@ -18,10 +18,10 @@
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "https://gitlab.fokus.fraunhofer.de/christian.bromann/appium-hbbtv-driver.git"
+    "url": "git@github.com:christian-bromann/devtools-backend.git"
   },
   "bugs": {
-    "url": "https://gitlab.fokus.fraunhofer.de/christian.bromann/appium-hbbtv-driver/issues"
+    "url": "https://github.com/christian-bromann/devtools-backend/issues"
   },
   "engines": {
     "node": ">=7.4.0",
