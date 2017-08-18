@@ -47,7 +47,9 @@
     "start:server": "node build/index.js",
     "start:dev:babel": "npm run compile -- --watch",
     "start:dev:webpack": "npm run webpack -- --watch",
-    "test": "eslint",
+    "test": "run-s test:*",
+    "test:eslint": "eslint lib",
+    "test:unit": "jest",
     "webpack": "webpack --progress --colors --config .config/webpack.config"
   },
   "dependencies": {
@@ -94,6 +96,7 @@
     "eslint-config-standard": "^7.0.0",
     "eslint-plugin-promise": "^3.4.0",
     "eslint-plugin-standard": "^2.0.1",
+    "jest": "^20.0.4",
     "nodemon": "^1.11.0",
     "npm-run-all": "^4.0.1",
     "webpack": "^2.2.1",
