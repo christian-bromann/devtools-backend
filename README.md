@@ -46,15 +46,9 @@ Once you open a page with a web client (like a browser) it should register your 
 
 ## Proxy Script Injection
 
-If your web client supports proxy settings you can also use the DevTools backend as HTTP proxy (note that this only works for pages served via http on port 80). Per default the server starts with the hostname of the machine it runs on. If this is for some reason not the correct host to address the server you can manually define the hostname as environment variable:
+If your web client supports proxy settings you can also use the DevTools backend as HTTP proxy (note that this only works for pages served via http on port 80). Per default the server starts with the hostname of the machine it runs on. For example if you run the project on localhost and setup Firefox to proxy request to `localhost:9222` it would allow to debug the Firefox browser with the DevTools application.
 
-```sh
-export PROXY_NETWORK_ADDRESS=192.168.0.1
-# or start the server with that environment variable set
-PROXY_NETWORK_ADDRESS=192.168.0.1 npm run start
-```
-
-It is important that `PROXY_NETWORK_ADDRESS` is set correctly otherwise it won't be able to inject scripts properly.
+![Firefox Demo](/docs/assets/demo.gif)
 
 ## Logging
 
