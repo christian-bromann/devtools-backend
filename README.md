@@ -1,12 +1,12 @@
 DevTools Backend
 ================
 
-A Node.JS implementation of the Chrome DevTools backend for debugging arbitrary web platforms (like [weinre](https://people.apache.org/~pmuellr/weinre/docs/latest/Home.html) just in "new").
+A Node.JS implementation of the Chrome DevTools backend for debugging arbitrary web platforms (e.g. HbbTV applications on Smart TVs). It is like [weinre](https://people.apache.org/~pmuellr/weinre/docs/latest/Home.html) just in "new".
 
 # Requirements
 
-- [Node.js](https://nodejs.org/en/) (v7.4.0)
-- [NPM](https://www.npmjs.com/) (v4.0.5 or higher)
+- [Node.js](https://nodejs.org/en/) (v8.2.1)
+- [NPM](https://www.npmjs.com/) (v5.3.0 or higher)
 
 # Installation
 
