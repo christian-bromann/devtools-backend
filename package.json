@@ -78,7 +78,11 @@
     "serve-favicon": "~2.4.1",
     "socket.io": "~1.7.2",
     "uuid": "~3.0.1",
-    "ws": "~2.2.0"
+    "ws": "~2.2.0",
+    "fs-promise": "^2.0.3",
+    "gulp": "^3.9.1",
+
+      
   },
   "devDependencies": {
     "babel-cli": "^6.22.2",
