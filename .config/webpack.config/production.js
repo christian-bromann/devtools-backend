@@ -5,12 +5,12 @@ import common from './common'
 
 const config = {
     bail: true,
-    debug: false,
+    //debug: false,
     profile: false,
     devtool: 'source-map',
     plugins: [
         new webpack.NoErrorsPlugin(),
-        new webpack.optimize.OccurenceOrderPlugin(true),
+        new webpack.optimize.OccurrenceOrderPlugin(true),
         new webpack.optimize.DedupePlugin(),
         new webpack.optimize.UglifyJsPlugin({
             compress: {
