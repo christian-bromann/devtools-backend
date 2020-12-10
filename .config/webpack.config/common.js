@@ -26,6 +26,7 @@ export default {
         }
     },
     cache: true,
+    devtool: "source-map",
     stats: {
         colors: true,
         reasons: true
