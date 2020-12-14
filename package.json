@@ -2,11 +2,12 @@
   "name": "@tidejs/devtools-backend",
   "author": "Pines-Cheng <spider.cs.nuc@gmail.com>",
   "description": "A Node.JS implementation of the devtools backend for debugging arbitrary web platforms",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "main": "./build/index.js",
   "directories": {
     "lib": "lib"
   },
+  "files": ["build","lib"],
   "bin": {},
   "keywords": [
     "chrome",
