@@ -1,6 +1,6 @@
 {
-  "name": "devtools-backend",
-  "author": "Christian Bromann <christian@saucelabs.com>",
+  "name": "@tidejs/devtools-backend",
+  "author": "Pines-Cheng <spider.cs.nuc@gmail.com>",
   "description": "A Node.JS implementation of the devtools backend for debugging arbitrary web platforms",
   "version": "0.0.0",
   "main": "./build/index.js",
@@ -18,7 +18,7 @@
   "license": "Apache-2.0",
   "repository": {
     "type": "git",
-    "url": "git@github.com:christian-bromann/devtools-backend.git"
+    "url": "git@github.com:Pines-Cheng/devtools-backend.git"
   },
   "bugs": {
     "url": "https://github.com/christian-bromann/devtools-backend/issues"
