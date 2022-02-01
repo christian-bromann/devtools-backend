@@ -1,6 +1,8 @@
 DevTools Backend
 ================
 
+‼️ __Attention:__ this project is not maintained anymore. Dependencies are out of date and introduce security vulnerabilities. Please not use it in production. ‼️
+
 A Node.JS implementation of the Chrome DevTools backend for debugging arbitrary web platforms (e.g. HbbTV applications on Smart TVs). It is the counterpart of the [devtools-frontend](https://github.com/ChromeDevTools/devtools-frontend) and is like [weinre](https://people.apache.org/~pmuellr/weinre/docs/latest/Home.html) just in "new".
 
 # Requirements
